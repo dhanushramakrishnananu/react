@@ -1,0 +1,32 @@
+.dashboard-patients_content {
+  .dashboard-card-component {
+    &_header {
+      padding: 14px;
+      &-title {
+        font-size: 14px;
+        &_counter {
+          min-width: 18px;
+          padding: 2px 4px;
+          margin-left: 5px;
+          font-size: 11px;
+        }
+      }
+      &-tools {
+
+          button {
+            &.icon-button {
+              width: 14px;
+              height: 14px;
+              margin-left: 10px;
+              &.dashboard-card-component_header-tools-add {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+      }
+    }
+
+
+  }
+}

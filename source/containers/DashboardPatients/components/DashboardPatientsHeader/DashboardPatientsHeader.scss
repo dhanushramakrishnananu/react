@@ -1,0 +1,342 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-patients-header {
+  @include card-block;
+
+  position: relative;
+  flex-direction: row;
+  margin-top: 0;
+  padding: 0;
+  &-normalcolor{
+  background-color: $green;
+  color: $white;
+  }
+  &-miscRefcolor
+  {
+    background-color:$tenne;
+    color: $white;
+  }
+  &-miscRefBalcolor
+  {
+    background-color:$shalimar;
+    color:$darkgrey;
+  }
+  &-status1color
+  {
+    background-color:$maroon;
+    color: $white;
+  }
+  &-status2color
+  {
+    background-color:$pink;
+    color: $white;
+  }
+  &-status3color
+  {
+    background-color:$statusblue;
+    color: $white;
+  }
+  &-status5color
+  {
+    background-color:$teal;
+    color: $white;
+  }
+  &-otherstatuscolor
+  {
+    background-color:$black;
+    color:$white;
+  }
+  &-main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 25px 10px;
+    
+    
+   height: 130px;
+    box-sizing: border-box;
+
+
+    @media (max-width: 1256px) {
+      padding: 14px 20px;
+    }
+
+    &_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+      }
+&_deceasedbutton {
+    @include icon-button;
+
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 20px;
+    transition: 0.2s;
+    color:$red;
+    font-size : 24px;
+    font-weight:bold;
+    border:2px solid $safron;
+    cursor:default;
+    svg {
+
+      max-width: 25px;
+      max-height: 25px;
+
+      path, ellipse {
+        fill: $safron;
+      }
+    }
+
+    &-active {
+      background-color: $white;
+
+      svg path, svg ellipse {
+        fill: $green-dark;
+      }
+    }
+  }
+  &_add, &_edit {
+    @include icon-button;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    background-color: $green-dark;
+    border-radius: 16px;
+    transition: 0.2s;
+
+    svg {
+
+      max-width: 16px;
+      max-height: 16px;
+
+      path, ellipse {
+        fill: $white;
+      }
+    }
+
+    &-active {
+      background-color: $white;
+
+      svg path, svg ellipse {
+        fill: $green-dark;
+      }
+    }
+  }
+
+  &_edit svg {
+    padding: 3px 0 0 3px;
+  }
+
+  &_add svg {
+    max-width: 14px;
+  }
+
+  &_patient-name-block {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 1344px) {
+      font-size: 12px;
+    }
+
+    h3 {
+      line-height: 1;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (max-width: 1344px) {
+        font-size: 16px;
+        white-space: normal;
+      }
+
+      @media (max-width: 1256px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &_details-block {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    line-height: 1.7;
+    font-size: 12px;
+    padding-bottom: 18px;
+    width: 100%;
+
+    @media (max-width: 1344px) {
+      font-size: 11px;
+      flex: 6;
+    }
+
+
+    @media (max-width: 1256px) {
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    &_row {
+      display: flex;
+      margin-bottom:8px;
+      &_key {
+        display: block;
+        text-align: right;
+        font-weight: normal;
+        margin-right: 12px;
+        box-sizing: border-box;
+        white-space: nowrap;
+     
+        @media (max-width: 1256px) {
+          min-width: 105px !important;
+        }
+      }
+
+      &_value {
+        flex: 3;
+        font-weight: 300;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width:140px;
+      }
+
+      
+
+      &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6) {
+        .dashboard-patients-header_details-block_row_key {
+          min-width: 45px;
+        }
+      }
+
+      &:nth-of-type(7), &:nth-of-type(8), &:nth-of-type(9) {
+        .dashboard-patients-header_details-block_row_key {
+          min-width: 105px;
+        }
+      }
+    }
+  }
+
+  &_extras {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+
+    .dashboard-patients-header_extras_switch_button {
+      display: flex;
+      justify-content: center;
+      border: none;
+      border-radius: 4px 4px 0 0;
+      padding: 7px 14px;
+      margin-right: 2px;
+      background-color: $green-dark;
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+      height: 30px;
+
+      span {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: $white;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: 8px;
+      }
+    }
+
+    &_switch {
+      min-width: 114px;
+
+      &_detail svg {
+        width: 19px;
+        height: 14px;
+      }
+
+      &_timeline svg {
+        width: 18px;
+        height: 16px;
+      }
+    }
+
+    &_group svg {
+      width: 20px;
+      height: 16px;
+    }
+  }
+
+  &_close {
+    @include icon-button;
+
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+.column1 {
+    float: left;
+    width: 20%;  
+}
+.column2 {
+    float: left;
+    width: 29%; 
+}
+.column3 {
+    float: left;
+    width: 25%;  
+}
+.column4 {
+    float: left;
+    width: 26%;  
+}
+.row {
+  width:100%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.columnnarrow {
+  min-width: 60px;
+}
+.columnnwide {
+  min-width: 110px;
+}
+.columnnsmall {
+  min-width: 40px;
+}
+.optionsDiv {
+    display: flex;
+    float: left;
+    align-items: left;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 3px;
+    padding-left: 15px;
+}

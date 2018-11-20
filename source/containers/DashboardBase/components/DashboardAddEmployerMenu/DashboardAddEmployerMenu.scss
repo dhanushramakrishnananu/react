@@ -1,0 +1,69 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.add-employer {
+  &-step2-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width: 100%;
+  }
+  &_table {
+    width: 100%;
+    table-layout: fixed;
+    &-wrapper {
+      padding: 0 10px;
+      width: 100%;
+      height: calc(100vh - 225px);
+      overflow-y: auto;
+    }
+    &-head {
+      font-weight: bold;
+      padding: 15px 10px 0 0;
+      text-align: left;
+      width: 33.3%;
+    }
+
+    &-row {
+      cursor: pointer;
+      svg {
+        width: 13px;
+        height: 16px;
+        margin-right: 5px;
+        margin-bottom: -1px;
+      }
+      &_active {
+        background-color: #0aa89e !important;
+        td {
+          color: white;
+        }
+      }
+    }
+
+    &-row:nth-child(even) {
+      background-color: $grey-card;
+    }
+
+    &-cell {
+      padding: 10px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &-link {
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .add-list {
+    li:nth-last-child(-n+3) .add-list_key{
+      flex: 4 !important;
+    }
+  }
+  
+}

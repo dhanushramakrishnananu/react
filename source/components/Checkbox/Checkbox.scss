@@ -1,0 +1,42 @@
+@import "../../utils/variables";
+
+.checkbox {
+  label {
+    position: relative;
+    display: block;
+    border: 1px solid $text-dark;
+    width: 16px;
+    height: 16px;
+
+    &.big {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input+label::after {
+    position: absolute;
+    left: -1px;
+    top: -7px;
+    display: block;
+    content: '';
+    font-size: 21px;
+    font-weight: bold;
+    color: $text-dark;
+  }
+
+   input+.big::after {
+    left: -2px;
+    top: -9px;
+    font-size: 29px;
+    font-weight: bold;
+  }
+
+  input[value=true]+label::after {
+    content: '✔';
+  }
+}

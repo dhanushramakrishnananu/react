@@ -1,0 +1,114 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+
+.edit-Aged-menu {
+  .side-list-content_documents {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    color: #333333;
+    svg {
+      width: 26px;
+	  height: 32px;
+      margin-right: 15px;
+    }
+  }
+
+.edit-list {
+        width: 100%;
+        &_cols {
+              align-items: flex-start !important;
+               &-check {
+                flex: 2;
+                display: flex;
+                justify-content: flex-end;
+
+                &.flex-1 {
+                  flex: 1;
+                }
+
+                label {
+                  font-weight: normal;
+                  margin-left: 8px;
+                }
+              }
+            }
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          min-height: 25px;
+          max-width: 100%;
+          width: 100%;
+          padding: 0 16px 16px 8px;
+          line-height: 1.3;
+
+          &.margin-bottom {
+            margin-bottom: 18px;
+          }
+        }
+        &_key {
+          padding-right: 8px;
+          text-align: right;
+          white-space: normal;
+          font-size: 14px;
+          font-weight: normal;
+
+          @media #{$IE-media} {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        &_value {
+          flex: 2;
+          text-align: right;
+          @media #{$IE-media} {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          input, select, textarea {
+            width: 100%;
+            min-width: 200px;
+            height: 25px;
+            border: 1px solid #8897a9;
+            padding: 10px 8px;
+            font-size: 12px;
+          }       
+
+          textarea {
+            height: 120px;
+            width:270px;
+          }
+        }
+      }
+}
+
+.edit-step-wrapper {
+  padding: 0 25px;
+  width: 100%;
+  .items-global {
+    display: flex;
+  }
+  
+}
+.maindiv
+{  
+  padding-top:30px;
+}
+.div
+{
+  float: left;
+  width: 100px;
+  &.content
+  {
+    float: left;
+  }
+}
+.textareaborde
+{
+  border: 1px solid;
+  width: 150px;
+  height: 50px;
+}

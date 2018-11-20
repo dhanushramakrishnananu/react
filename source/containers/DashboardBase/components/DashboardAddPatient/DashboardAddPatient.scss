@@ -1,0 +1,99 @@
+@import "../../../../utils/variables";
+
+.add-patient-menu {
+  .add-list {
+    &_input {
+      display: block;
+      &-wrapper {
+        position: relative;
+      }
+      &-invalid {
+        border-color: #ff4646 !important;
+      }
+    }
+    &_error {
+      font-size: 12px;
+      color: #ff4646;
+      position: absolute;
+      left: 0;
+    }
+  }
+  &_step-three {
+    .add-list {
+      &_key {
+        flex: 1;
+
+      }
+
+      &_value {
+        flex: 1;
+      }
+      &_check {
+        width: 25px;
+        display: flex;
+        margin-left: 16px;
+
+        label {
+          position: relative;
+          display: block;
+          width: 25px;
+          height: 25px;
+          border: 1px solid $grey-element;
+        }
+
+        input[type=checkbox] {
+          display: none;
+        }
+
+        input[value=true] + label::after {
+          position: absolute;
+          left: 0;
+          top: -7px;
+          display: block;
+          content: '✔';
+          font-size: 29px;
+          font-weight: bold;
+          color: #596471;
+        }
+      }
+    }
+  }
+
+  .datepicker .calendar-block svg {
+    width: 18px;
+    height: 18px;
+    right: 4px;
+  }
+
+  .check-detapicker {
+    display: flex;
+
+    label {
+      position: relative;
+      display: block;
+      width: 25px;
+      height: 25px;
+      border: 1px solid $grey-element;
+      margin-right: 8px;
+    }
+
+    input[type=text] {
+      min-width: 186px !important;
+    }
+
+    input[type=checkbox] {
+      display: none;
+    }
+
+    input[value=true] + label::after {
+      position: absolute;
+      left: 0;
+      top: -7px;
+      display: block;
+      content: '✔';
+      font-size: 29px;
+      font-weight: bold;
+      color: #596471;
+    }
+  }
+}

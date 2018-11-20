@@ -1,0 +1,151 @@
+@import "utils/variables";
+@import "utils/mixins";
+
+//CSS Reset
+
+* {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  vertical-align:baseline;
+  background:transparent;
+  box-sizing: border-box;
+}
+
+body {
+  line-height:1;
+  height: 100%;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+hr {
+  display:block;
+  height:1px;
+  border:0;
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+//Notifications
+
+.dashboard-notifications {
+  margin: 0 16px;
+  background-color: #fff;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-notification {
+  display: flex;
+  padding: 20px 10px;
+  align-items: center;
+  &_info {
+    display: flex;
+    justify-content: space-between;
+    //flex-direction: column;
+    display: block !important;
+  }
+  &_title,
+  &_message {
+    color: $black;
+    white-space: pre-wrap;
+  }
+  &_title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.toastify-content {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.3), 2px 2px 8px 0 rgba(0, 0, 0, 0.3) !important;
+  svg {
+    height: 40px;
+    width: 40px;
+    margin-right: 25px;
+    margin-left: 20px;
+  }
+  &--success {
+    background-color: #79f3a2 !important;
+  }
+  &--warning{
+    background-color: #ffd555 !important;
+  }
+  &--error {
+    background-color: #eb6c6c !important;
+  }
+}
+
+.react-datepicker {
+  &-wrapper {
+    width: 100%;
+  }
+
+  &__input-container {
+    width: 100%;
+  }
+}

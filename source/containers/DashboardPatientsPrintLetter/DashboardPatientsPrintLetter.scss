@@ -1,0 +1,54 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+
+.dashboard-patients-print-letter {
+  display: flex;
+  margin: 0 16px;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 15px 25px;
+  &_title {
+    color: $text-dark;
+    margin-bottom: 50px;
+  }
+  &_options {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+  &_table {
+    width: 100%;
+    &-head {
+      font-weight: bold;
+      padding: 35px 0;
+      text-align: left;
+    }
+    &-row {
+      svg {
+        width: 13px;
+        height: 16px;
+        margin-right: 5px;
+        margin-bottom: -1px;
+      }
+    }
+    &-row:nth-child(odd) {
+      background-color: $grey-card;
+    }
+    &-cell {
+      padding: 10px 0;
+    }
+    &-cell:first-child,
+    &-head:first-child {
+      padding: 0 10px;
+      width: 25px;
+    }
+    &-link {
+      color: $blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

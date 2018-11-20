@@ -1,0 +1,58 @@
+.mt5{
+  margin-top: 5px ;
+}
+.add-pending-payment {
+  .add-attorney-step2-wrapper {
+    .add-attorney_table-wrapper {
+      height: calc(100vh - 550px);
+    }
+    .add-attorney_table {
+      .add-attorney_table-head {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+  .payment-insurance {
+    .total-charges {
+      input[type="checkbox"] {
+        width: 10%;
+        min-width: 0;
+        height: 20px;
+        max-width: 20px;
+      }
+      .add-list_value{
+        width: 55%;
+      }
+      .add-list_key {
+        vertical-align: middle;
+        padding-left: 10px;
+        text-align: left !important;
+      }
+    }
+  }
+}
+.add-pending-payment{
+  form{
+    ul{
+      li{
+        .add-attorney-step2-wrapper{
+          .add-attorney_table-wrapper{
+              font-size: 12.5px;
+            .add-attorney_table-cell{
+              font-size: 12.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.insurance-section-heading {
+    font-size: 12px;
+    display: block !important;
+    text-align: left !important;
+    width: 100%;
+    font-weight: 600;
+}

@@ -1,0 +1,87 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-insurance-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 8px;
+
+  &_image {
+    width: 56px;
+    height: 56px;
+    background-color: $green;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg path {
+      fill: $white;
+    }
+  }
+
+  &_title {
+    font-size: 14px;
+    font-weight: 500;
+    color: $green;
+    margin-right: 16px;
+  }
+
+  svg {
+    width: 40px;
+    height: 40px;
+    max-height: 32px;
+  }
+
+  &_row {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 18px;
+    margin-bottom: 16px;
+
+    &_key {
+      flex: 1;
+      width: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: $text-light;
+      font-weight: 500;
+      margin-right: 16px;
+    }
+
+    &_value {
+      flex: 2;
+      width: auto;
+      color: $text-dark;
+      font-weight: 500;
+    }
+
+    &_title {
+      min-height: 36px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &_att-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+
+    span {
+      color: $text-dark;
+      font-size: 14px;
+      font-weight: 500;
+
+      &:nth-of-type(2) {
+        margin-top: 4px;
+        color: $text-light;
+        font-size: 10px;
+      }
+    }
+  }
+}

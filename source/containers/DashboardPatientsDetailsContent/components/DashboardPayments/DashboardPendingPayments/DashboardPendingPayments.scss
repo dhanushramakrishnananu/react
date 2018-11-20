@@ -1,0 +1,31 @@
+.dashboard-pending-payment {
+  .text-popup, .input-text-popup {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .text-popup {
+    padding: 5px 15px 5px 0;
+  }
+  .input-text-popup {
+    width: 75%;
+    margin-bottom: 20px;
+    padding-top:10px;
+    .form-control {
+      border: 1px solid #444;
+      padding: 6px 12px;
+      min-height: 70px;
+      resize: vertical;
+      width: 100%;
+    }
+  }
+  .pending-lists {
+    clear: both;
+    width: 100%;
+    float: left;
+    li {
+      display: block;
+      width: 50%;
+      float: left;
+    }
+  }
+}

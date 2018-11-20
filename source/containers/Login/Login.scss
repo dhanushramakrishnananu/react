@@ -1,0 +1,125 @@
+@import "../../utils/variables";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  background: url("./assets/img/revclaims_login_bg.png") 50% 50% no-repeat #212828;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: $white;
+
+  &-header {
+    padding: 40px;
+
+    svg {
+      width: 300px;
+      height: 68px;
+    }
+  }
+
+  &-content {
+    display: block;
+    padding: 0 12px;
+
+    .login-form-wrapper {
+      display: flex;
+      justify-content: center;
+
+      .login-form {
+        overflow: hidden;
+        padding-right: 72px;
+
+        div {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        h2 {
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+
+        h3 {
+          font-size: 16px;
+          margin-bottom: 48px;
+        }
+
+        label {
+          font-size: 12px;
+          margin-bottom: 16px;
+        }
+
+        input {
+          display: block;
+          background: none;
+          border: none;
+          border-bottom: 3px solid $white;
+          width: 100%;
+          padding: 8px;
+          font-size: 20px;
+          outline: none;
+          color: $white;
+          margin-bottom: 40px;
+        }
+
+        input[type=text] {
+          color: $green;
+        }
+
+        input[type=password] {
+          margin-bottom: 12px;
+        }
+
+        .login-error {
+          color: #ff5267;
+          text-transform: lowercase;
+          font-size: 12px;
+        }
+
+        button {
+          background-color: $green;
+          width: 100%;
+          padding: 0;
+          height: 60px;
+          font-size: 14px;
+          border: none;
+          color: $white;
+          transition: 0.2s;
+          cursor: pointer;
+          margin-top: 28px;
+
+          &:disabled {
+            opacity: 0.75;
+            cursor: not-allowed;
+
+            &:hover {
+              background-color: $green;
+            }
+
+          }
+
+          &:hover {
+            background-color: #0a8a80;
+          }
+        }
+      }
+
+      .login-secure {
+        margin-top: 104px;
+        padding: 6px 16px;
+        max-width: 200px;
+        font-size: 14px;
+        border-left: 2px solid $white;
+      }
+    }
+  }
+
+  &-footer {
+    padding: 24px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+  }
+}

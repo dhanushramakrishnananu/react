@@ -1,0 +1,57 @@
+@import "../../../../utils/variables";
+
+.dashboard-tasklists {
+  height: 100%;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: $green;
+    color: $white;
+    padding: 0 24px;
+
+    .dashboard-tasklists_header-left {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 31px;
+        height: 32px;
+        margin-right: 16px;
+        cursor: default;
+
+        path {
+          fill: $white;
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    .dashboard-tasklists_header-right {
+      svg {
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+        cursor: pointer;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &_tasklists {
+    padding-top: 8px;
+    height: 100%;
+    max-height: calc(100% - 60px);
+    background-color: rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    overflow: auto;
+  }
+}

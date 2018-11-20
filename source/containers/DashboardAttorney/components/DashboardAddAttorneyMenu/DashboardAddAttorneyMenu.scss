@@ -1,0 +1,15 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-insurance_menu {
+  @include side-menu;
+
+  display: flex;
+  max-width: 360px;
+  min-width: 360px;
+  width: 100%;
+  height: calc(100vh - 48px);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);
+  overflow: hidden;
+
+}

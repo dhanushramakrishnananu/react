@@ -1,0 +1,118 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-grouped-patients-lists {
+  @include card-block;
+  margin: 0 8px 8px;
+  padding: 0;
+  &_id{
+    float: left;
+    font-weight: 400;
+    width: 100px;
+  }
+  &_status{
+       font-weight: 400;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      flex: 3;
+      font-weight: normal;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      padding: 16px 0 16px 16px;
+    }
+
+    &-right {
+      flex: 2;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 16px 16px 16px 0;
+      min-width: 128px;
+
+      &_count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+        box-sizing: border-box;
+        min-width: 24px;
+        border-radius: 4px;
+        padding: 2px 4.5px;
+        font-size: 11px;
+        font-weight: bold;
+        color: $white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      button {
+        @include icon-button;
+
+        height: 16px;
+        width: 16px;
+        margin-left: 16px;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow: auto;
+    padding: 0 0 16px;
+
+    li {
+      flex: 1 0 auto;
+      line-height: 3;
+      height: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      a {
+        display: inline-block;
+        padding: 0 16px;
+        box-sizing: border-box;
+        color: #333;
+        text-decoration: none;
+        width: 100%;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: $grey-light;
+        }
+
+        &.dashboard-grouped-patients-lists_link_active {
+          background-color: $blue;
+          color: $white;
+
+          .dashboard-grouped-patients-lists_link-inner {
+            border-bottom: 1px solid $blue;
+          }
+        }
+
+        .dashboard-grouped-patients-lists_link-inner {
+          font-weight: 400;
+          border-bottom: 1px solid #dddddd;
+        }
+      }
+
+      &:last-child a .dashboard-grouped-patients-lists_link-inner {
+        border: none;
+      }
+    }
+  }
+
+  .is-open .dashboard-grouped-patients-lists_header .dashboard-grouped-patients-lists_header-right .dashboard-grouped-patients-lists_header-caret-button {
+    transform: rotate(-90deg);
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+
+.dashboard-group-acts {
+
+  display: flex;
+  margin: 0 16px;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 15px 25px;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: move;
+    &-title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+   &_table {
+    width: 100%;
+    table-layout: fixed;
+    &-wrapper {
+      padding: 0 10px;
+      width: 100%;
+      height: calc(100vh - 310px);
+      overflow-y: auto;
+    }
+    &-head {
+      font-weight: bold;
+      padding: 15px 10px 0 0;
+      text-align: left;
+      width: 33.3%;
+      vertical-align: middle
+    }
+
+    &-row {
+      svg {
+        width: 13px;
+        height: 16px;
+        margin-right: 5px;
+        margin-bottom: -1px;
+      }
+    }
+
+    &-row:nth-child(even) {
+      background-color: $grey-card;
+    }
+
+    &-cell {
+      padding: 10px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &-value{
+        width: 45px;
+        float: left;
+        font-weight:bolder;
+        padding-top:5px;
+    }
+    &-link {
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

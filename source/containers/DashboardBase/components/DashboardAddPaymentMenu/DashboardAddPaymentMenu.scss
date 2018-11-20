@@ -1,0 +1,177 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.total-charges {
+  width: 100%;
+  display: block;
+  .add-list_key {
+    display: inline-block !important;
+    width: 30%;
+  }
+  .add-list_value {
+    width: 70%;
+    display: inline-block !important;
+    text-align: left !important;
+  }
+}
+.continue {
+  display: block;
+  width: 100%;
+  .add-list_key {
+    width: 41%;
+    display: inline-block !important;
+  }
+  .add-list_value {
+    width: 59%;
+    display: inline-block !important;
+    text-align: left !important;
+    input[type="checkbox"] {
+      min-width: 30px !important;
+      width: 30px !important;
+    }
+  }
+}
+.insurance-payment-heading {
+  .add-list_key {
+    font-size: 18px !important;
+    display: block !important;
+    text-align: left !important;
+    width: 100%;
+  }
+}
+.main-block_side-list_side-list-menu {
+  .dashboard-side-list-menu {
+    .side-list-content {
+      position: relative;
+      overflow: auto;
+      form {
+        overflow-y: scroll;
+      }
+      li {
+        .add-list_value {
+          .react-datepicker-popper {
+            left: -40px !important;
+          }
+        }
+      }
+      .adds-buttons-block {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+.add-payment-2 {
+  li {
+    > div {
+      width: 100%;
+    }
+    .add-list_key {
+      display: inline-block !important;
+      width: 41%;
+    }
+    .add-list_value {
+      width: 59%;
+      display: inline-block !important;
+      text-align: left !important;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
+.add-payment-4{
+  li{
+    div{
+      .w41{
+        width: 41%;
+      }
+    }
+  }
+}
+
+/* IE 10+ */
+@media #{$IE-media} {
+  .dashboard-page {
+    .main-block_side-list {
+      .dashboard-side-list-menu {
+        .side-list-content {
+          li {
+            display: block;
+            .add-list_key {
+              display: inline-block;
+              width: 40%;
+            }
+            .add-list_value {
+              display: inline-block;
+              width: 60% !important;
+              min-width: 60% !important;
+              max-width: 60% !important;
+              select {
+                padding: 0 !important;
+              }
+              textarea {
+                display: block;
+                overflow: hidden;
+                white-space: pre-line;
+              }
+            }
+          }
+          .add-list_acc-adv {
+            .add-list_value {
+              width: 100% !important;
+              max-width: 100% !important;
+            }
+          }
+        }
+        .dashboard-side-list-menu_content {
+          display: block;
+          position: relative;
+          .side-list-content {
+            display: block;
+            position: relative;
+            overflow: auto;
+            .adds-buttons-block {
+              position: absolute;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .optionsDiv {
+    right: 0;
+  }
+  .dashboard-card-component_content {
+    overflow-y:auto;
+    overflow-x: hidden !important;
+  }
+ .dashboard-person-info {
+    width: auto;
+    display: block !important;
+  }
+  .dashboard-person-info_row.dashboard-person-info_row_title{
+      display: block !important;
+      width: 100%;
+  }
+  .dashboard-person-info_row {
+    display: block !important;
+  }
+  .dashboard-person-info_row_key, .dashboard-person-info_row_value {
+    display: inline-block !important;
+  }
+  .dashboard-person-info_row_key {
+    width: 45% !important;
+  }
+  .dashboard-person-info_row_value {
+    width: 43% !important;
+  }
+}
+.insurance-section-heading {
+    font-size: 12px;
+    display: block !important;
+    text-align: left !important;
+    width: 100%;
+    font-weight: 600;
+}

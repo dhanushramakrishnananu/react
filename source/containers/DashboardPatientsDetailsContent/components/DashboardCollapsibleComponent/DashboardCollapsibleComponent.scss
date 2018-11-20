@@ -1,0 +1,60 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-collapsible-component {
+  @include card-block;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 0 8px ;
+
+  .Collapsible__trigger {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    .dashboard-collapsible-component_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-left {
+        flex: 2;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        padding: 16px 0 16px 16px;
+      }
+
+      &-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 16px 16px 16px 0;
+        min-width: 48px;
+
+        button {
+          @include icon-button;
+
+          height: 16px;
+          width: 16px;
+          margin-left: 16px;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    &.is-open .dashboard-collapsible-component_header .dashboard-collapsible-component_header-right button {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &_content {
+    padding: 16px;
+  }
+}

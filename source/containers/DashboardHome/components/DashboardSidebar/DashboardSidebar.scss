@@ -1,0 +1,67 @@
+@import "../../../../utils/variables";
+
+.dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $grey-dark;
+  padding: 32px 0;
+  min-width: 88px;
+  box-sizing: border-box;
+  height: calc(100vh - 48px);
+  overflow: auto;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);
+  z-index: 10;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 50px;
+    min-height: 40px;
+    margin-top: 32px;
+    cursor: pointer;
+    border-radius: 26px;
+    transition: 0.2s;
+    outline: none;
+    color: $white;
+    text-decoration: none;
+
+    &:nth-of-type(4) {
+      svg {
+        max-width: 25px;
+      }
+    }
+      svg {
+        max-width: 32px;
+      }
+
+    svg {
+      path {
+        fill: #b5b7ba;
+      }
+    }
+
+    span {
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    &.dashboard-sidebar_active-link {
+      color: $blue;
+
+      svg {
+        path {
+          fill: $blue;
+        }
+      }
+    }
+
+    svg {
+      max-width: 26px;
+    }
+  }
+}

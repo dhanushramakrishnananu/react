@@ -1,0 +1,235 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-documents {
+  flex: 1;
+  display: flex;
+  box-sizing: border-box;
+  padding: 12px;
+
+  &_left-block_search-block, &_right-block {
+    display: none;
+  }
+
+  &_left-block {
+    box-sizing: border-box;
+    width: 100%;
+
+    &_list {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+  }
+  &_text {
+    flex: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 56px;
+    max-height: 48px;
+    float:left;
+    margin-left: 48px;
+    width:25%;
+  }
+  &_item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    min-height: 58px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $grey-light;
+    }
+    &.current {
+      background-color: $light-green;
+    }
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $text-light;
+    }
+
+    span {
+      color: $grey-middle;
+      margin-right: 4px;
+
+      &:nth-of-type(2) {
+        color: $black;
+      }
+    }
+
+    &_img {
+      margin-right: 24px;
+      width: 33px;
+      min-width: 33px;
+      height: 42px;
+    }
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+
+      &-top {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 4px;
+        max-width: inherit;
+
+        span:nth-of-type(2) {
+          font-weight: 500;
+        }
+      }
+
+      &-bottom {
+        display: flex;
+        align-items: baseline;
+      }
+    }
+  } 
+}
+
+.dashboard-documents_expand {
+  .dashboard-documents {
+    &_left-block {
+      flex: 1;
+      width: 33.3%;
+
+      &_search-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 42px 0;
+
+        .dashboard-documents_search {
+          border: none;
+          border-bottom: 1px solid $green;
+          padding: 8px;
+          margin-right: 32px;
+          width: 100%;
+          outline: none;
+
+          &-label {
+            width: 30px;
+            height: 20px;
+            margin: 0 8px 0 16px;
+            cursor: pointer;
+
+            svg {
+              path {
+                fill: $green;
+              }
+            }
+          }
+        }
+      }
+
+      &_list {
+        max-height: 524px;
+        padding-right: 12px;
+        margin-right: 16px;
+        overflow: auto;
+      }
+    }
+
+    &_text {
+      flex: 5;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      font-weight: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 56px;
+      max-height: 48px;
+      float:left;
+      margin-left: 48px;
+      width:25%;
+    }
+
+    &_right-block {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      width: 66.6%;
+
+      &_preview-block {
+        flex: 1;
+        border: solid 1px #cccccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: $grey-middle;
+        height: 480px;
+      }
+
+      &_doc-info-block {
+        border: solid 1px #cccccc;
+        padding: 16px 64px;
+        max-height: 124px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @media #{$IE-media} {
+          display: block;
+          width: 100%;
+          height: 124px;
+          overflow: hidden;
+          white-space: pre-line;
+        }
+
+        .dashboard-documents_doc-info {
+          &-row {
+            display: flex;
+            font-size: 14px;
+            width: 50%;
+            line-height: 1;
+            margin-bottom: 8px;
+
+            @media #{$IE-media} {
+              display: inline-block;
+              width: 50%;
+              white-space: pre-line;
+            }
+          }
+
+          &-key {
+            flex: 1;
+            font-weight: 400;
+
+            @media #{$IE-media} {
+              display: inline-block;
+              width: 40%;
+            }
+          }
+
+          &-value {
+            flex: 2;
+            padding-left: 8px;
+            max-width: 66.6%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media #{$IE-media} {
+              display: inline-block;
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

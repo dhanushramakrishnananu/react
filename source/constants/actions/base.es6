@@ -1,0 +1,6 @@
+// Search patient
+export const SEARCH_PATIENT = 'SEARCH_PATIENT';
+
+export const SEARCH_PATIENT_SUCCESS = 'SEARCH_PATIENT_SUCCESS';
+
+export const SEARCH_PATIENT_ERROR = 'SEARCH_PATIENT_ERROR';

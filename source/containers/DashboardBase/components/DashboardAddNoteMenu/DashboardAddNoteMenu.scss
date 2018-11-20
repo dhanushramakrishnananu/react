@@ -1,0 +1,149 @@
+@import "../../../../utils/variables";
+
+.add-note-menu {
+  textarea:disabled {
+    color: darkgray;
+    border: 1px solid darkgray;
+  }
+  .add-list {
+    &_cols {
+      align-items: flex-start !important;
+
+      &.checkbox-block {
+        padding: 0 16px 0 14px !important;
+      }
+
+      &-left {
+        flex: 1;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        div {
+          display: flex;
+
+          span {
+            flex: 1;
+            width: 50%;
+            text-align: right;
+            font-weight: normal;
+            margin-bottom: 16px;
+
+            &.value {
+              margin-left: 8px;
+              text-align: left;
+              color: $grey-element;
+            }
+          }
+        }
+      }
+
+      &-check {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 7px;
+        padding-bottom: 10px;
+        &.flex-1 {
+          flex: 1;
+        }
+
+        label {
+          font-weight: normal;
+          margin-left: 8px;
+        }
+      }
+    }
+    &_textarea {
+      .add-list_key {
+        height: 80px;
+      }
+    }
+
+    &_datepicker {
+      .add-list_value {
+        min-width: 170px;
+        max-width: 170px;
+
+        input {
+          min-width: 170px !important;
+        }
+      }
+    }
+
+    &_value {
+      flex: 3 !important;
+    }
+
+    &_follow-up {
+      display: flex;
+      justify-content: space-between !important;
+      padding: 0 18px !important;
+      margin-bottom: 48px;
+
+      span {
+        color: $blue;
+        font-size: 14px;
+        font-weight: normal;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    &_acc-adv {
+      flex-direction: column !important;
+
+      .add-list {
+        &_key, &_value {
+          width: 100%;
+          min-height: 18px;
+          text-align: left !important;
+          padding-bottom: 8px;
+        }
+      }
+    }
+
+    &_patients-list {
+      border: 1px solid $grey-element;
+      width: 100%;
+      overflow: auto;
+      margin-left: 8px;
+      padding: 12px 0 0;
+      max-height: calc(100vh - 242px);
+
+      li {
+        display: flex;
+
+        .block {
+          font-size: 12px;
+          font-weight: normal;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          &-check {
+            width: 25px;
+            text-align: center;
+          }
+
+          &-id {
+            width: 50px;
+          }
+
+          &-name {
+            padding-left: 5px;
+            width: 150px;
+          }
+
+          &-status {
+            flex: 6;
+          }
+        }
+      }
+    }
+  }
+
+  .datepicker .calendar-block svg {
+    width: 18px;
+    height: 18px;
+    right: 4px;
+  }
+}

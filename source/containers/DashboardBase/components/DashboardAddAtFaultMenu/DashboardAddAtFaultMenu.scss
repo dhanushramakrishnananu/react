@@ -1,0 +1,53 @@
+.side-list-content {
+  .scroll-div {
+    max-height: 161px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+  }
+  ul {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    &.payment-insurance {
+      li {
+        .add-list_value {
+          display: inline-block !important;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+    }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 25px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 16px 16px 8px;
+    line-height: 1.3;
+    position: relative;
+
+    .add-list_value {
+      display: table-cell;
+      span{
+        position: absolute;
+        right: 0;
+        color: red;
+      }
+    }
+    .add-list_key {
+      vertical-align: top;
+      display: table-cell;
+    }
+    .add-list_key.alert {
+      color: #f00;
+    }
+  }
+}
+.alert {
+  color: #f00;
+}

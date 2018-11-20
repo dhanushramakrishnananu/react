@@ -1,0 +1,167 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-patients-details {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  width: 100%;
+  height: 100%;
+
+  .expand-only {
+    display: none;
+  }
+&_text {
+      flex: 5;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      font-weight: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 56px;
+      max-height: 48px;
+      float:left;
+      margin-left: 48px;
+      width:25%;
+    }
+  &_group-top , &_group-bottom {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 100%;
+  }
+
+  &_group-top {
+    max-height: 346px;
+  }
+
+  &_group {
+    flex: 1 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+
+
+  &_row {
+    flex: 1;
+    display: flex;
+    line-height: 1.5;
+    height: 20px;
+    min-height: 20px;
+    &_required {
+          color:$red;
+          font-weight: bold;
+          font-size: 15px;
+        }
+    &.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    &_key {
+      flex: 1;
+      margin-right: 16px;
+      color: $text-light;
+      text-align: right;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &_value {
+      flex: 1;
+      font-weight: 500;
+      margin-right: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+
+      &.checkbox-row {
+
+        input {
+          max-width: calc(100% - 41px);
+        }
+
+        label {
+          margin-left: 8px;
+        }
+
+        &-reverse {
+          label {
+            margin: 0 8px 0 0;
+          }
+
+          .react-datepicker-popper {
+            left: - 198px !important;
+          }
+
+          .react-datepicker__triangle {
+            left: 88%;
+          }
+        }
+      }
+
+      input, select {
+        border: 1px solid #333;
+        padding: 0 3px;
+        max-width: calc(100% - 16px);
+        width: 100%;
+      }
+
+      select {
+        min-width: calc(100% - 16px);
+      }
+
+      label {
+        width: 17px;
+        height: 17px;
+      }
+
+      .react-datepicker-wrapper .react-datepicker__input-container {
+        max-width: 100%;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-patients-details-expanded .dashboard-patients-details {
+  max-height: 537px;
+  min-height: 538px;
+
+  &.mva-accident {
+    max-height: 582px;
+    min-height: 582px;
+  }
+
+  &_group-top {
+    min-height: 318px;
+    max-height: 317px;
+    margin-bottom: 40px;
+  }
+
+  &_group-bottom {
+    max-height: 144px;
+    margin-bottom: 36px;
+  }
+
+  &_group {
+    width: calc(100% / 3);
+  }
+
+  .not-expand {
+    display: none;
+  }
+
+  .expand-only {
+    display: flex;
+  }   
+}

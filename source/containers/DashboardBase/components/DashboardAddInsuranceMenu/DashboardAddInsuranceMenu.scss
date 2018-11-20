@@ -1,0 +1,154 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.add-attorney {
+  &-step2-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width: 100%;
+  }
+  &_table {
+    width: 100%;
+    table-layout: fixed;
+    &-wrapper {
+      padding: 0 10px;
+      width: 100%;
+      height: calc(100vh - 310px);
+      overflow-y: auto;
+    }
+    &-head {
+      font-weight: bold;
+      padding: 15px 10px 0 0;
+      text-align: left;
+      width: 33.3%;
+    }
+
+    &-row {
+      svg {
+        width: 13px;
+        height: 16px;
+        margin-right: 5px;
+        margin-bottom: -1px;
+      }
+    }
+
+    &-row:nth-child(even) {
+      background-color: $grey-card;
+    }
+
+    &-cell {
+      padding: 10px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &-link {
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .add-list {
+    li:nth-last-child(-n+3) .add-list_key{
+      flex: 4 !important;
+    }
+  }
+  &.insurance-menu {
+    .add-list {
+      .add-list_value {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left !important;
+        flex: inherit !important;
+        width: 70%;
+      }
+    }
+    .change-insurance-adjuster {
+      width: 100%;
+      .change-li{
+        justify-content: center;
+        .change-heading {
+          justify-content: center;
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+
+    }
+  }
+}
+
+.post-group-attorney {
+  padding:0 10px;
+  .post-title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .post-value-select {
+    text-align: right;
+    padding-right: 10px;
+    .add-list_key {
+      display: inline-block;
+      font-weight: 400;
+    }
+    .add-list_value {
+      display: inline-block;
+      input {
+        min-width: 25px !important;
+      }
+    }
+  }
+  .add-attorney_table {
+    th {
+      font-weight: 400;
+      &:last-child {
+        text-align: center;
+      }
+    }
+    td {
+      &:last-child {
+        text-align: center;
+        input {
+          min-width: 25px !important;
+        }
+      }
+    }
+  }
+}
+.dashboard-side-list-menu_content {
+  .side-list-content.delete-insurance.insurance-delete-text {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      li {
+        white-space: normal;
+        width: 70%;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.adjuster-active{
+  background: #0aa89e !important;
+  color: #fff;
+}
+.is-open .Collapsible span.Collapsible__trigger.is-open {
+  background: #9be0e0;
+}
+
+.is-open .Collapsible span.Collapsible__trigger.is-closed {
+  background: #9be0e0;
+}

@@ -1,0 +1,99 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  background-color: $grey-light;
+
+  * {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar-track {
+      background-color: $text-light;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: $text-light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #484c4c;
+    }
+  }
+
+  .search-loading {
+    display: none;
+    z-index: 12;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .loading-component .loading-component_loading .loading-component_circle {
+      background-color: $white;
+    }
+  }
+
+  &_search-loading .search-loading {
+    display: block;
+  }
+
+  .main-block {
+    display: flex;
+
+    &_side-list {
+      display: flex;
+      max-width: 360px;
+      min-width: 360px;
+      width: 100%;
+      height: calc(100vh - 48px);
+      box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);
+      overflow: hidden;
+
+      .dashboard-tasklists {
+        width: 100%;
+        transition: 0.2s;
+      }
+      .dashboard-groupedpatients {
+        width: 100%;
+        transition: 0.2s;
+      }
+      .dashboard-side-list-menu {
+        @include side-menu;
+      }
+
+      &_side-list-menu {
+
+        .dashboard-tasklists {
+          width: 0;
+
+          &_header {
+            h3, svg {
+              display: none;
+            }
+          }
+        }
+
+        .dashboard-side-list-menu {
+          width: 100%;
+        }
+      }
+    }
+
+    .content-block {
+      width: 100%;
+      max-height: calc(100vh - 48px);
+      overflow: auto;
+    }
+  }
+}
+
+.loading-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}

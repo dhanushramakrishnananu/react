@@ -1,0 +1,134 @@
+@import "../../../../utils/variables";
+@import "../../../../utils/mixins";
+
+.dashboard-card-component {
+  @include card-block;
+
+  margin: 0 16px 16px 0;
+  height: 400px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+
+  &_flex-1 {
+    flex: 1 1 auto;
+    width: calc(33.3% - 16px);
+    max-width: calc(33.3% - 16px);
+  }
+
+  &_flex-2 {
+    flex: 1 1 auto;
+    width: calc(66.6% - 16px);
+    max-width: calc(66.6% - 16px);
+  }
+
+  &_flex-3 {
+    flex: 3;
+  }
+
+  &.expanded {
+    width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+    height: auto;
+    min-height: 400px;
+
+    .dashboard-card-component_content {
+      display: block;
+      max-height: none;
+      height: auto;
+      padding: 4px;
+      overflow: auto;
+    }
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    cursor: move;
+
+    &_short {
+      svg:last-of-type {
+        display: none;
+      }
+    }
+
+    &_expanded {
+      svg:first-of-type {
+        display: none;
+      }
+    }
+
+    &-title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      font-weight: normal;
+
+      &_counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+        box-sizing: border-box;
+        min-width: 24px;
+        border-radius: 4px;
+        padding: 2px 4.5px;
+        margin-left: 8px;
+        font-size: 11px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    &-tools {
+      display: flex;
+      align-items: center;
+      cursor: auto;
+
+      button.icon-button {
+        @include icon-button;
+
+        width: 16px;
+        height: 16px;
+        margin-left: 16px;
+
+        &.dashboard-card-component_header-tools-add {
+          width: 24px;
+          height: 24px;
+
+          svg {
+            path {
+              fill: $blue;
+            }
+          }
+        }
+      }
+
+      &-container {
+        display: flex;
+      }
+
+      .save {
+        margin: 0 10px;
+        color: $blue;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .cancel {
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_content {
+    display: block;
+    max-height: 348px;
+    height: 348px;
+    padding: 3px 0px 3px 0px;
+    overflow: auto;
+  }
+}

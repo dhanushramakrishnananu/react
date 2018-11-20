@@ -1,0 +1,22 @@
+export const formStep3Config = [
+    {name: 'Company', text: 'Insurance Company', type: 'label', value: ''},
+    {name: 'Adjuster', text: 'Adjuster', type: 'label', value: ''},
+    {name: 'Address', text: 'Address', type: 'label', value: ''},
+    {name: 'City', text: 'City', type: 'label', value: ''},
+    {name: 'State', text: 'State', type: 'label', value: ''},
+    {name: 'Zip', text: 'Zip', type: 'label', value: ''},
+    {name: 'Phno', text: 'Adjuster Phone No', type: 'label', value: ''},
+    {name: 'FaxNo', text: 'Fax No.', type: 'label', value: ''},
+    {name: 'ClaimNo', text: 'Claim No', type: 'textfield', value: '', required: true},
+    {name: 'TypeCoverage', text: 'Type of Coverage', valueField: 'InsCoverageID', labelField: 'Coverage', type: 'selectbox', value: '', defaultValue: '0', required: true},
+    {name: 'PolicyLimits', text: 'Policy Limits', type: 'textfield', value: ''},
+    {name: 'ExpectedRecovery', text: 'Expected Recovery', type: 'numberfield', value: ''},
+    {name: 'PolicyHolderName', text: 'Policy Holder', type: 'textfield', value: ''},
+    {name: 'AdjustedAmount', text: 'Adjusted Amount', type: 'numberfield', value: ''},
+    {name: 'PolicyNumber', text: 'Policy Number', type: 'numberfield', value: ''},
+    {name: 'Verified', text: 'Verified', type: 'checkbox', value: ''},
+    {name: 'Status', text: 'Status', defaultValue: '0', valueField: 'Status', labelField: 'Status', type: 'selectbox', value: ''},
+    {name: 'SettlementDate', text: 'Settlement Date', type: 'datepicker', value: ''},
+    {name: 'BilledDate', text: 'Billed Date', type: 'datepicker', value: ''},
+    {name: 'Comment', text: 'Comment', type: 'textfield', value: ''}
+];

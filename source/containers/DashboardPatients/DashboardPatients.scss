@@ -1,0 +1,15 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.dashboard-patients {
+  display: flex;
+  flex-direction: column;
+
+  &_content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 16px;
+    width: auto;
+    height: 100%;
+  }
+}
